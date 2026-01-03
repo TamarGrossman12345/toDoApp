@@ -1,247 +1,154 @@
 :root {
   --background: #c1deea;
-  --primary-color: #f7f7f7;
-  --secondary-color: #fafafa;
-  --accent-color: #e26eff;
-  --text-color: #545154;
+  --primary: #ffffff;
+  --accent: #e26eff;
+  --text: #545154;
+  --low: #6bcf95;
+  --medium: #ffb703;
+  --high: #ef476f;
 }
+
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
-html {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16pt;
-  color: var(--text-color);
-}
+
 body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--background);
+  color: var(--text);
   min-height: 100vh;
-  padding: 10px;
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-h1 {
-  margin-bottom: 20 px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 230px;
-  
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--accent-color);
-  padding: 5px 130px;
-  border-radius: 10px;
-  margin-top: 150px;
-  position: relative;
-}
-
-.title {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin: 0;
-}
-
-.menu-button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: none;
-  box-sizing: border-box;
-  padding: 5px 10px;
-  width: 50px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.menu-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.menu-button img {
-  width: 24px;
-  height: 24px;
-}
-
-.menu-options {
-  position: absolute;
-  top: -40px;
-  right: 10px;
-  transform: translateY(-50%);
-  background-color: var(--primary-color);
-  border: 1px solid var(--secondary-color);
-  border-radius: 8px;
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-}
-
-.menu-options button {
-  background-color: var(--accent-color);
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.menu-options button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.menu-options.show {
-  display: block;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-
-}
-
-#todo-input {
-  box-sizing: border-box;
-  padding: 5px 90px;
-  width: 490px;
-  background: none;
-  border: 1px solid var(--secondary-color);
-  border-radius: 100px;
-  font: inherit;
-  color: var(--text-color);
-  caret-color: var(--accent-color);
-  margin-bottom: 10px;
+  background: var(--accent);
+  padding: 20px;
   text-align: center;
-  
+  color: white;
+font-size: 25px;
 }
 
-form {
-  position: relative;
+.app {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  gap: 20px;
 }
-#add-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 10px;
-  padding: 0 8px;
-  background-color: var(--accent-color);
-  height: 80%;
-  border: none;
-  border-radius: 100px;
-  font: inherit;
-  font-weight: 6000;
-  color: var(--text-color);
-  cursor: pointer;
+
+.projects {
+  width: 250px;
+  background: var(--primary);
+  border-radius: 12px;
+  padding: 15px;
 }
-.todo {
+
+.projects h2 {
   margin-bottom: 10px;
-  padding: 10px 16px;
-  background-color: var(--primary-color);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 50px;
-  width: 500px;
-  height: 30px;
 }
 
-.delete-button {
-  margin-left: 10px;
-  padding: 1px;
-  background: none;
-  border: none;
+.project {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.project.active {
+  background: var(--accent);
+  color: white;
+}
+
+#add-project-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* TODOS */
+.todos {
+  flex: 1;
+  background: var(--primary);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.todos-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+.todo {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  position: relative;
-}
-.delete-button svg {
-  transition: 200ms ease;
-}
-.delete-button:hover svg {
-  fill: #ff0033;
-  padding-right: 0px;
 }
 
-.custom-checkbox {
+.todo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-title {
+  font-weight: 600;
+}
+
+.todo-date {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.todo.low {
+  border-left: 6px solid var(--low);
+}
+
+.todo.medium {
+  border-left: 6px solid var(--medium);
+}
+
+.todo.high {
+  border-left: 6px solid var(--high);
+}
+
+.todo-details {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 300px;
+  background: var(--primary);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.todo-details.hidden {
   display: none;
 }
 
-.custom-checkbox-label {
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--accent-color);
-  background-color: transparent;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.custom-checkbox-label.checked svg {
-  background-color: var(--accent-color);
-  width: 24px;
-  height: 24px;
-}
-
-.custom-checkbox-label svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: white;
-  width: 16px;
-  height: 16px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.custom-checkbox-label.checked svg {
-  opacity: 1;
-}
-
-.todo-completed {
+.todo-details label {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
-  padding: 10px 16px;
-  background-color: var(--primary-color);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 50px;
-  width: 500px;
-  height: 30px;
 }
 
-.todo-text-completed {
-  text-decoration: line-through;
-  color: var(--text-color);
-  padding: 10px 16px;
-  background-color: var(--primary-color);
-  border-radius: 15px;
+.details-actions {
   display: flex;
-  min-height: 50px;
-  width: 500px;
-  height: 30px;
+  justify-content: space-between;
 }
-.todo-text {
-  padding: 10px;
-  padding-right: 0;
-  flex-grow: 1;
-  margin-left: 10px;
-  white-space: nowrap;
-  border-radius: 150px;
+
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.danger {
+  background: var(--high);
+  color: white;
 }
