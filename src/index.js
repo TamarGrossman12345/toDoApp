@@ -1,3 +1,6 @@
+import './style.css';
+import JSConfetti from 'js-confetti';
+
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoListUL = document.getElementById("todo-list");
