@@ -1,5 +1,6 @@
 import './style.css';
 import JSConfetti from 'js-confetti';
+import openCreateTaskDialog from './todoDialog';
 
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
@@ -11,6 +12,22 @@ const hideDoneTasksButton = document.getElementById("hide-done-tasks");
 const deleteDoneTasksButton = document.getElementById("delete-done-tasks");
 const showAllTasksButton = document.getElementById("show-all-tasks");
 const jsConfetti = new JSConfetti();
+
+
+
+
+  const dialog = document.querySelector(".todo-dialog");
+  const addTodoBtn = document.getElementById("add-todo-btn");
+
+  addTodoBtn.addEventListener("click", () => {
+    openCreateTaskDialog()
+    // dialog.showModal();
+  });
+
+  
+  const addProjectBtn = document.querySelector('#add-project-btn')
+
+
 
 const saveTodos = () => {
   const todoJason = JSON.stringify(allTodos);

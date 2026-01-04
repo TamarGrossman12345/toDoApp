@@ -12,9 +12,9 @@
     <main class="app">
       <aside class="projects">
         <h2>Projects</h2>
-        <ul id="project-list">
-          <li class="project active">Default</li>
-        </ul>
+        <div id="project-list">
+          <button class="project active">Default</button>
+        </div>
         <button id="add-project-btn">+ Add Project</button>
       </aside>
 
@@ -31,9 +31,8 @@
     </main>
 
 
-    <section class="todo-details hidden " id="todo-details">
-
-      <h3>Edit Todo</h3>
+    <dialog class="todo-dialog" id="todo-details">
+        <h3 class="todo-dialog-title">Edit Todo</h3>
       <label>
         Title
         <input type="text" id="detail-title" />
@@ -64,9 +63,11 @@
       </label>
 
       <div class="details-actions">
-        <button id="save-todo">Save</button>
+        <button id="save-todo" class="save">Save</button>
         <button id="delete-todo" class="danger">Delete</button>
       </div>
-    </section>
+
+      
+       </dialog>>
   </body>
 </html>
