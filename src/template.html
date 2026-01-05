@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Todo App</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1 class="title">To Do</h1>
-    </header>
 
-    <main class="app">
-      <aside class="projects">
-        <h2>Projects</h2>
-        <div id="project-list">
-          <button class="project active">Default</button>
-        </div>
-        <button id="add-project-btn">+ Add Project</button>
-      </aside>
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App</title>
+</head>
 
-      <section class="todos">
-        <header class="todos-header">
-          <h2 id="current-project-title">Default</h2>
-          <button id="add-todo-btn">+ Add Todo</button>
-        </header>
+<body>
+  <header class="header">
+    <h1 class="title">To Do</h1>
+  </header>
 
-        <ul id="todo-list">
-
-        </ul>
-      </section>
-    </main>
-
-
-    <dialog class="todo-dialog" id="todo-details">
-        <h3 class="todo-dialog-title">Edit Todo</h3>
-      <label>
-        Title
-        <input type="text" id="detail-title" />
-      </label>
-
-      <label>
-        Description
-        <textarea id="detail-description"></textarea>
-      </label>
-
-      <label>
-        Due Date
-        <input type="date" id="detail-date" />
-      </label>
-
-      <label>
-        Priority
-        <select id="detail-priority">
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </label>
-
-      <label>
-        Notes
-        <textarea id="detail-notes"></textarea>
-      </label>
-
-      <div class="details-actions">
-        <button id="save-todo" class="save">Save</button>
-        <button id="delete-todo" class="danger">Delete</button>
+  <main class="app">
+    <aside class="projects">
+      <h2>Projects</h2>
+      <div id="project-list">
+        <button class="project active">Default</button>
       </div>
+      <button id="add-project-btn">+ Add Project</button>
+    </aside>
 
-      
-       </dialog>>
-  </body>
+    <section class="todos">
+      <header class="todos-header">
+        <h2 id="current-project-title">Default</h2>
+        <button id="add-todo-btn">+ Add Todo</button>
+      </header>
+
+      <ul id="todo-list">
+        <li class="todo low">
+          <div class="todo-info">
+            <label class="custom-checkbox">
+              <input type="checkbox">
+              <span class="checkbox-image"></span>
+              <span class="todo-title">משימה לדוגמה</span>
+            </label>
+
+          </div>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+</body>
+
 </html>

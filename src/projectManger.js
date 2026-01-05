@@ -21,3 +21,5 @@ class ProjectManger {
         return this.projects.find(p => p.id === id);
     }
 }
+
+export default ProjectManger

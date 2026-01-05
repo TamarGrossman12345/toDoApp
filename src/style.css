@@ -66,7 +66,7 @@ font-size: 25px;
   width: 100%;
 }
 
-/* TODOS */
+
 .todos {
   flex: 1;
   background: var(--primary);
@@ -93,18 +93,9 @@ font-size: 25px;
   cursor: pointer;
 }
 
-.todo-info {
-  display: flex;
-  flex-direction: column;
-}
 
 .todo-title {
   font-weight: 600;
-}
-
-.todo-date {
-  font-size: 0.8rem;
-  opacity: 0.7;
 }
 
 .todo.low {
@@ -130,6 +121,10 @@ font-size: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+#todo-list{
+  padding: 0;
+}
+
 dialog {
   margin: auto;
   border-radius: 12px;
@@ -144,13 +139,19 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.todo-dialog-title{
+.project-dialog {
+  height: 20rem;
+}
+
+.todo-dialog-title,
+.project-dialog-title{
   font-size: 45px;
   margin-bottom: 10px;
    padding: 10px;
 }
 
-.todo-dialog label {
+.todo-dialog label,
+.project-dialog label{
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -160,8 +161,10 @@ dialog::backdrop {
 
 .todo-dialog input,
 .todo-dialog textarea,
-.todo-dialog select{
-  size: 30px;
+.todo-dialog select,
+.project-dialog input{
+
+  size: 40px;
   font-size: 20px;
 }
 
@@ -181,6 +184,13 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+
+
+
 button.danger {
   background: var(--high);
   color: white;
@@ -189,4 +199,48 @@ button.danger {
 button.save {
   background: var(--accent);
   color: white;
+}
+
+
+.checkbox-image {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 1;
+  gap: 12px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%; 
+  border: 2px solid #ccc;
+  background-color: white;
+  background-size: 80%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+  background-image: none; 
+}
+
+.custom-checkbox {
+    display: flex ;      
+    flex-direction: row ; 
+    align-items: center;            
+    gap: 12px;                      
+    cursor: pointer;
+    width: fit-content;             
+}
+
+.custom-checkbox input:checked ~ .checkbox-image {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  background-image: url('./Icons/icons/check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+}
+
+.custom-checkbox input {
+    display: none; 
+}
+
+.todo-text, .todo-title {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;  /* ליתר ביטחון עבור דפדפנים ישנים */
 }

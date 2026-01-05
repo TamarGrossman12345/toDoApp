@@ -1,7 +1,7 @@
 
 class TodoTask{
 
-constructor({ title, notes, priority, description, dueDate = new Date() }) {
+constructor({ title = '', notes = '', priority, description =' ', dueDate = new Date() }) {
         this.title = title;
         this.priority = priority;
         this.description = description;
