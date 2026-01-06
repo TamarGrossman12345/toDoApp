@@ -1,7 +1,8 @@
-
 import { storageManager } from "../storageManger";
 import openAndCreateProjectDialog from "./createProjectDialog";
 import Project from "./project";
+import { createProjectPropInTab } from "./projectUI";
+
 
 const initProjectDialog = () => {
     
@@ -23,17 +24,20 @@ const initProjectDialog = () => {
     });
 
     projectForm.addEventListener("submit", (e) => {
+        
         e.preventDefault();
         const formData = new FormData(projectForm);
         const data = Object.fromEntries(formData.entries());
-        const newProject = new Project(data)
-        console.log(newProject)
-        // storageManager.addTask(newTask);
-        mainProjectDialog.close()
+        const newProject = new Project(
+            data['project-name']
+        );
 
+        storageManager.addProject(newProject)
+        createProjectPropInTab(newProject)
+        mainProjectDialog.close()
     });
 
-
+    
 }
 
 export default initProjectDialog

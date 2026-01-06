@@ -1,7 +1,8 @@
 import openAndCreateTaskDialog from "./createTodoDialog";
 import TodoTask from "./todos";
 import { storageManager } from "../storageManger";
-
+import { createTodoPropInTab } from "./taskUI";
+import { currentProjectId } from "../index";
 
 const initTaskDialog = () => {
     
@@ -24,19 +25,22 @@ const initTaskDialog = () => {
 
     todoForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        
         const formData = new FormData(todoForm);
         const data = Object.fromEntries(formData.entries());
         const newTask = new TodoTask({
             title: data['todo-title'],
             priority: data['todo-priority'], 
             description: data['todo-description'],
-            dueDate: data['todo-date']
+            dueDate: data['todo-date'],
+            projectID: currentProjectId
         });
         
         console.log(newTask)
         storageManager.addTask(newTask);
-        mainTaskDialog.close()
+        createTodoPropInTab(newTask)
 
+        mainTaskDialog.close()
     });
 
 

@@ -47,9 +47,11 @@ font-size: 25px;
 }
 
 .project {
-  padding: 8px;
+  padding: 10px;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 18px;
+  width: 100%;
 }
 
 .project.active {
@@ -58,8 +60,8 @@ font-size: 25px;
   padding: 10px ;
   font-size: 18px;
   width: 100%;
-
 }
+
 
 #add-project-btn {
   margin-top: 10px;
@@ -182,6 +184,9 @@ button {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+
 }
 
 button:hover {

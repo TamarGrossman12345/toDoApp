@@ -1,10 +1,3 @@
-function createOption(value, text, isSelected = false) {
-    const opt = document.createElement('option');
-    opt.value = value;
-    opt.textContent = text;
-    opt.selected = isSelected;
-    return opt;
-}
 
 
 const openAndCreateProjectDialog = () => {

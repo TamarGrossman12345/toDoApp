@@ -1,34 +1,64 @@
 import './style.css';
-import JSConfetti from 'js-confetti';
+//import JSConfetti from 'js-confetti';
 import initTaskDialog from './todos/createTodoActions';
 import initProjectDialog from './projects/createProjectActions';
-const todoForm = document.getElementById("todo-form");
-const todoInput = document.getElementById("todo-input");
-const todoListUL = document.getElementById("todo-list");
+import { loadTasks } from './todos/taskUI';
 
-const menuButton = document.querySelector(".menu-button");
-const menuOptions = document.querySelector(".menu-options");
-const hideDoneTasksButton = document.getElementById("hide-done-tasks");
-const deleteDoneTasksButton = document.getElementById("delete-done-tasks");
-const showAllTasksButton = document.getElementById("show-all-tasks");
-const jsConfetti = new JSConfetti();
+// const todoForm = document.getElementById("todo-form");
+// const todoInput = document.getElementById("todo-input");
+// const todoListUL = document.getElementById("todo-list");
+
+// const menuButton = document.querySelector(".menu-button");
+// const menuOptions = document.querySelector(".menu-options");
+// const hideDoneTasksButton = document.getElementById("hide-done-tasks");
+// const deleteDoneTasksButton = document.getElementById("delete-done-tasks");
+// const showAllTasksButton = document.getElementById("show-all-tasks");
+//const jsConfetti = new JSConfetti();
 
 
 
 const addTodoBtn = document.getElementById("add-todo-btn");
 const addProjectBtn = document.querySelector('#add-project-btn')
 
-const currentProject = null
+export let currentProjectId = ''
+
 
 const initApp = () => {
+
+  addTodoBtn.disabled = true;
+
   addTodoBtn.addEventListener("click", () => {
     initTaskDialog()
   });
 
-  addProjectBtn.addEventListener("click", () => {
+  addProjectBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     initProjectDialog()
   });
 
+  const projectList = document.querySelector('#project-list');
+
+projectList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.project');
+    // const projectBtnId = btn.id;
+    
+    if (btn) {
+        currentProjectId = btn.id;
+
+        if(currentProjectId === 'default'){
+          addTodoBtn.disabled = true;
+        }
+        else {
+          addTodoBtn.disabled = false;
+        }
+
+        document.querySelectorAll('.project').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        loadTasks(currentProjectId)
+    }
+
+});
 }
 
 

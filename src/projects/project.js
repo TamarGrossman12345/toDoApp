@@ -1,3 +1,4 @@
+import { storageManager } from "../storageManger";
 import TodoTask from "../todos/todos";
 
 class Project {
@@ -5,7 +6,7 @@ class Project {
     constructor(projectName) {
         this.id = crypto.randomUUID();
         this.name = projectName;
-        this.tasks = []; 
+        //this.tasks = []; 
     }
 
     addTask(taskData){
@@ -15,6 +16,15 @@ class Project {
 
     removeTask(taskId) {
         this.tasks = this.tasks.filter(t => t.id !== taskId);
+    }
+
+    deleteProject(id) {
+        //projectTasks = storageManager.
+        this.projects = this.projects.filter(p => p.id !== id);
+    }
+
+    getTasksFromProject() {
+        return storageManager.getTasksByProjectId(this.id)
     }
 }
 
