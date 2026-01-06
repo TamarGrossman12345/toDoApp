@@ -38,8 +38,6 @@ export const createTodoPropInTab = (currentTodo) => {
 export const loadTasks = (currentProjectId) => {
     const container = document.querySelector('#todo-list')
     container.replaceChildren();
-
-    
     
     if(currentProjectId === 'default'){
         container.textContent =   `You can't add tasks in the Default list`;

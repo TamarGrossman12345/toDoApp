@@ -1,8 +1,8 @@
 :root {
-  --background: #c1deea;
+  --background: #cde2ec;
   --primary: #ffffff;
-  --accent: #e26eff;
-  --text: #545154;
+  --accent: #f07bd3;
+  --text: #494649;
   --low: #6bcf95;
   --medium: #ffb703;
   --high: #ef476f;
@@ -204,6 +204,10 @@ button.danger {
 button.save {
   background: var(--accent);
   color: white;
+}
+
+button :disabled {
+  background-color: #494649;
 }
 
 
