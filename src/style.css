@@ -195,7 +195,6 @@ button:hover {
 }
 
 
-
 button.danger {
   background: var(--high);
   color: white;
@@ -206,8 +205,11 @@ button.save {
   color: white;
 }
 
-button :disabled {
-  background-color: #494649;
+button:disabled {
+    background-color: #adacad;
+    color: var(--text);    
+    opacity: 0.4; 
+    filter: none;
 }
 
 
