@@ -1,7 +1,7 @@
 import './style.css';
 import JSConfetti from 'js-confetti';
-import initTaskDialog from './createTodoActions';
-import initProjectDialog from './createProjectActions';
+import initTaskDialog from './todos/createTodoActions';
+import initProjectDialog from './projects/createProjectActions';
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoListUL = document.getElementById("todo-list");

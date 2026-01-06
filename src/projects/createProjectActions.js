@@ -1,5 +1,5 @@
 
-import { storageManager } from "./storageManger";
+import { storageManager } from "../storageManger";
 import openAndCreateProjectDialog from "./createProjectDialog";
 import Project from "./project";
 

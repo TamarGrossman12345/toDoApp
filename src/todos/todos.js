@@ -1,12 +1,13 @@
 
 class TodoTask{
 
-constructor({ title = '', notes = '', priority, description =' ', dueDate = new Date() }) {
+constructor({ projectID, title = '', notes = '', priority, description =' ', dueDate = new Date() }) {
         this.title = title;
         this.priority = priority;
         this.description = description;
         this.dueDate = dueDate;
         this.notes = notes;
+        this.projectID = projectID
         
         this.id = crypto.randomUUID(); 
         this.isCompleted = false;

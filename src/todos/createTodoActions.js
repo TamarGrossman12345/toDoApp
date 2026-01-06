@@ -1,6 +1,6 @@
 import openAndCreateTaskDialog from "./createTodoDialog";
 import TodoTask from "./todos";
-import { storageManager } from "./storageManger";
+import { storageManager } from "../storageManger";
 
 
 const initTaskDialog = () => {
@@ -32,6 +32,7 @@ const initTaskDialog = () => {
             description: data['todo-description'],
             dueDate: data['todo-date']
         });
+        
         console.log(newTask)
         storageManager.addTask(newTask);
         mainTaskDialog.close()

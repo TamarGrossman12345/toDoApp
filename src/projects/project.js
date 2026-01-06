@@ -1,4 +1,4 @@
-import TodoTask from "./todos";
+import TodoTask from "../todos/todos";
 
 class Project {
 
