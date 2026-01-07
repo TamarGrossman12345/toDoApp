@@ -1,6 +1,6 @@
 
 
-import { storageManager } from "../storageManger"
+import { storageManager } from "../modules/storageManger"
 
 export const createTodoPropInTab = (currentTodo) => {
 

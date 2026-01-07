@@ -261,8 +261,8 @@ button:disabled {
     background-color: #5F6368;
 
     
-    -webkit-mask-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
-    mask-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+    -webkit-mask-image: url('./Icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+    mask-image: url('./Icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -300,7 +300,7 @@ button:disabled {
 .custom-checkbox input:checked ~ .checkbox-image-check {
   background-color: var(--accent);
   border-color: var(--accent);
-  background-image: url('./Icons/icons/check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+  background-image: url('./Icons/check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
 }
 
 

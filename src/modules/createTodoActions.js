@@ -1,7 +1,7 @@
-import openAndCreateTaskDialog from "./createTodoDialog";
+import openAndCreateTaskDialog from "./createProjectActions";
 import TodoTask from "./todos";
-import { storageManager } from "../storageManger";
-import { createTodoPropInTab } from "./taskUI";
+import { storageManager } from "../modules/storageManger"; 
+import { createTodoPropInTab } from "../components/taskUI";
 import { currentProjectId } from "../index";
 
 const initTaskDialog = () => {
@@ -14,16 +14,15 @@ const initTaskDialog = () => {
     }
 
     mainTaskDialog = openAndCreateTaskDialog()
-    const cancelBtn = document.querySelector('#cancel-btn')
+    const cancelBtn = mainTaskDialog.querySelector('#cancel-btn')
     const todoForm = mainTaskDialog.querySelector('#todo-form');
 
-
     
-    cancelBtn.addEventListener("click", () => {
+    cancelBtn?.addEventListener("click", () => {
         mainTaskDialog.close()
     });
 
-    todoForm.addEventListener("submit", (e) => {
+    todoForm?.addEventListener("submit", (e) => {
         e.preventDefault();
         const container = document.querySelector('#todo-list')
 

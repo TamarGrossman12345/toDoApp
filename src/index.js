@@ -1,8 +1,8 @@
 import './style.css';
 //import JSConfetti from 'js-confetti';
 import initTaskDialog from './modules/createTodoActions';
-import initProjectDialog from './projects/createProjectActions';
-import { loadTasks } from './todos/taskUI';
+import initProjectDialog from './modules/createProjectActions';
+import {loadTasks} from './components/taskUI'
 
 // const todoForm = document.getElementById("todo-form");
 // const todoInput = document.getElementById("todo-input");
