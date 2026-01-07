@@ -307,9 +307,7 @@ button:disabled {
 .custom-checkbox-delete:hover .checkbox-image-delete{
   background-color: var(--high);
 }
-/* .custom-checkbox-delete input ~ .checkbox-image-delete {
-  background-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
-} */
+
 
 .custom-checkbox input,
 .custom-checkbox-delete input {
@@ -319,5 +317,5 @@ button:disabled {
 .todo-text, .todo-title {
   margin: 0;
   display: inline-block;
-  vertical-align: middle;  /* ליתר ביטחון עבור דפדפנים ישנים */
+  vertical-align: middle;  
 }

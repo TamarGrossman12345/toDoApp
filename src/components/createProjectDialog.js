@@ -42,6 +42,7 @@ const openAndCreateProjectDialog = () => {
     saveBtn.className = 'save'
 
     const cancelBtn = document.createElement('button')
+    cancelBtn.type = 'button'
     cancelBtn.textContent = 'Cancel'
     cancelBtn.id = 'cancel-btn'
     cancelBtn.className = 'danger'

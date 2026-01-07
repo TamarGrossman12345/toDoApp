@@ -13,7 +13,6 @@ import {loadTasks} from './components/taskUI'
 // const hideDoneTasksButton = document.getElementById("hide-done-tasks");
 // const deleteDoneTasksButton = document.getElementById("delete-done-tasks");
 // const showAllTasksButton = document.getElementById("show-all-tasks");
-//const jsConfetti = new JSConfetti();
 
 
 
@@ -60,9 +59,6 @@ projectList.addEventListener('click', (e) => {
 
 });
 }
-
-
-
 
 
 initApp()

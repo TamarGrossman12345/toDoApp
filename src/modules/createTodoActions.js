@@ -1,8 +1,12 @@
-import openAndCreateTaskDialog from "./createProjectActions";
+import openAndCreateTaskDialog from "../components/createTodoDialog";
 import TodoTask from "./todos";
 import { storageManager } from "../modules/storageManger"; 
 import { createTodoPropInTab } from "../components/taskUI";
 import { currentProjectId } from "../index";
+import JSConfetti from "js-confetti";
+
+const jsConfetti = new JSConfetti();
+
 
 const initTaskDialog = () => {
     
@@ -24,7 +28,8 @@ const initTaskDialog = () => {
 
     todoForm?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const container = document.querySelector('#todo-list')
+
+        // const container = document.querySelector('#todo-list')
 
         const formData = new FormData(todoForm);
         const data = Object.fromEntries(formData.entries());
@@ -36,10 +41,10 @@ const initTaskDialog = () => {
             projectID: currentProjectId
         });
         
-        console.log(newTask)
+        
         storageManager.addTask(newTask);
-        container.textContent =''
         createTodoPropInTab(newTask)
+        jsConfetti.addConfetti();
 
         mainTaskDialog.close()
     });
