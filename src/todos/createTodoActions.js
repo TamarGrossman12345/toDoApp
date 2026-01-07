@@ -25,7 +25,8 @@ const initTaskDialog = () => {
 
     todoForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        
+        const container = document.querySelector('#todo-list')
+
         const formData = new FormData(todoForm);
         const data = Object.fromEntries(formData.entries());
         const newTask = new TodoTask({
@@ -38,6 +39,7 @@ const initTaskDialog = () => {
         
         console.log(newTask)
         storageManager.addTask(newTask);
+        container.textContent =''
         createTodoPropInTab(newTask)
 
         mainTaskDialog.close()

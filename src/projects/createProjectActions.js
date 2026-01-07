@@ -37,7 +37,6 @@ const initProjectDialog = () => {
         mainProjectDialog.close()
     });
 
-    
 }
 
 export default initProjectDialog

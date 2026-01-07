@@ -212,8 +212,15 @@ button:disabled {
     filter: none;
 }
 
+.todo-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    gap: 12px;
+}
 
-.checkbox-image {
+.checkbox-image-check  {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -231,7 +238,41 @@ button:disabled {
   background-image: none; 
 }
 
-.custom-checkbox {
+.checkbox-image-delete {
+  align-items: center;
+  cursor: pointer;
+  line-height: 1;
+  gap: 12px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%; 
+
+  background-size: 80%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: none; 
+
+
+  display: block;
+  transition: background-color 0.2s;
+    
+    
+    border: none; 
+    background-color: #5F6368;
+
+    
+    -webkit-mask-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+    mask-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.custom-checkbox,
+.custom-checkbox-delete {
     display: flex ;      
     flex-direction: row ; 
     align-items: center;            
@@ -240,13 +281,38 @@ button:disabled {
     width: fit-content;             
 }
 
-.custom-checkbox input:checked ~ .checkbox-image {
+.custom-checkbox-delete{
+    display: flex ;      
+    flex-direction: row ; 
+    align-items: center;            
+    gap: 12px;                      
+    cursor: pointer;
+    width: fit-content;   
+
+    justify-content: center;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-left: auto;
+}
+
+
+.custom-checkbox input:checked ~ .checkbox-image-check {
   background-color: var(--accent);
   border-color: var(--accent);
   background-image: url('./Icons/icons/check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
 }
 
-.custom-checkbox input {
+
+.custom-checkbox-delete:hover .checkbox-image-delete{
+  background-color: var(--high);
+}
+/* .custom-checkbox-delete input ~ .checkbox-image-delete {
+  background-image: url('./Icons/icons/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg');
+} */
+
+.custom-checkbox input,
+.custom-checkbox-delete input {
     display: none; 
 }
 

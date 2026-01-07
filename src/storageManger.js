@@ -38,21 +38,6 @@ export const storageManager = {
         safeProjects.push(newProject)
         this.saveProject(safeProjects)
     },
-
-//     updateProject(currentProject, ProjectId) {
-//     const projects = this.getProjects();
-//     const index = projects.findIndex(p => String(p.id) === String(ProjectId));
-    
-
-//     if (index !== -1) {
-//         // המרה לאובייקט פשוט לפני שמירה - מבטיח ש-JSON.stringify יעבוד חלק
-//         projects[index] = JSON.parse(JSON.stringify(currentProject));
-//         this.saveProject(projects);
-//         console.log("Storage updated successfully!");
-//     } else {
-//         console.error("Could not find project to update!");
-//     }
-// },
    
     deleteTask(idToDelete) {
         const tasks = this.getTasks();
@@ -86,14 +71,4 @@ export const storageManager = {
 }
 
    
-    // toggleTaskStatus(taskId) {
-    //     const tasks = this.getTasks();
-    //     const updatedTasks = tasks.map(task => {
-    //         if (task.id === taskId) {
-    //             return { ...task, isCompleted: !task.isCompleted };
-    //         }
-    //         return task;
-    //     });
-    //     this.saveTasks(updatedTasks);
-    // }
 };

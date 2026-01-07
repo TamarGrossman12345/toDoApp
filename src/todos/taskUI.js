@@ -25,13 +25,28 @@ export const createTodoPropInTab = (currentTodo) => {
     todoInput.type = "checkbox"
 
     const todoSpanImg = document.createElement('span')
-    todoSpanImg.classList.add("checkbox-image")
+    todoSpanImg.classList.add("checkbox-image-check")
 
     const todoSpanTitle = document.createElement('span')
     todoSpanTitle.classList.add("todo-title")
     todoSpanTitle.textContent = `${currentTodo.title}`
 
-    todoLabel.append(todoInput,todoSpanImg, todoSpanTitle)
+
+
+
+    const todoLabelDelete = document.createElement('label')
+    todoLabelDelete.classList.add("custom-checkbox-delete")
+
+    todoContainer.append(todoLabelDelete)
+
+    const todoInputDelete = document.createElement('input')
+    todoInputDelete.type = "checkbox"
+
+    const todoSpanImgDelete = document.createElement('span')
+    todoSpanImgDelete.classList.add("checkbox-image-delete")
+
+    todoLabel.append(todoInput ,todoSpanImg, todoSpanTitle,)
+    todoLabelDelete.append( todoInputDelete, todoSpanImgDelete)
 }
 
 
@@ -53,7 +68,7 @@ export const loadTasks = (currentProjectId) => {
     }
 
     
-    container.textContent = ''
+    container.textContent = ' '
     savedTasks.forEach(task => {
         createTodoPropInTab(task);
     });
