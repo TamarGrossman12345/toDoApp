@@ -1,5 +1,5 @@
 import { storageManager } from "../storageManger";
-import TodoTask from "../todos/todos";
+import TodoTask from "./todos";
 
 class Project {
 

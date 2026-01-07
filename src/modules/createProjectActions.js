@@ -1,7 +1,7 @@
 import { storageManager } from "../storageManger";
-import openAndCreateProjectDialog from "./createProjectDialog";
+import openAndCreateProjectDialog from "../componants/createProjectDialog";
 import Project from "./project";
-import { createProjectPropInTab } from "./projectUI";
+import { createProjectPropInTab } from "../componants/projectUI";
 
 
 const initProjectDialog = () => {

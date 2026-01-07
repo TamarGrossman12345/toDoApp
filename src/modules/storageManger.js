@@ -1,4 +1,4 @@
-import Project from "./projects/project";
+import Project from "./modules/project";
 
 // storageManager.js
 const STORAGE_TODO_KEY = 'my_todo_list';

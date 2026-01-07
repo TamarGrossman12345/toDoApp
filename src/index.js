@@ -1,6 +1,6 @@
 import './style.css';
 //import JSConfetti from 'js-confetti';
-import initTaskDialog from './todos/createTodoActions';
+import initTaskDialog from './modules/createTodoActions';
 import initProjectDialog from './projects/createProjectActions';
 import { loadTasks } from './todos/taskUI';
 
