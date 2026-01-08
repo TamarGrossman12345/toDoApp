@@ -1,6 +1,6 @@
 
 
-import { storageManager } from "../modules/storageManger"
+import { storageManager } from "../modules/storageManager"
 
 export const createTodoPropInTab = (currentTodo) => {
 
@@ -13,6 +13,7 @@ export const createTodoPropInTab = (currentTodo) => {
 
     const todoContainer = document.createElement('div')
     todoContainer.classList.add("todo-info")
+    todoContainer.id = `${currentTodo.id}`
 
     todoLi.append(todoContainer)
 

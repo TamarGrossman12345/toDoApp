@@ -1,4 +1,4 @@
-import { storageManager } from './storageManger'
+import { storageManager } from './storageManager'
 import openAndCreateProjectDialog from "../components/createProjectDialog";
 import Project from "./project";
 import { createProjectPropInTab } from "../components/projectUI";

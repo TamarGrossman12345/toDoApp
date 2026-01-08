@@ -1,11 +1,9 @@
 import openAndCreateTaskDialog from "../components/createTodoDialog";
 import TodoTask from "./todos";
-import { storageManager } from "../modules/storageManger"; 
+import { storageManager } from "./storageManager"; 
 import { createTodoPropInTab } from "../components/taskUI";
 import { currentProjectId } from "../index";
-import JSConfetti from "js-confetti";
 
-const jsConfetti = new JSConfetti();
 
 
 const initTaskDialog = () => {
@@ -44,7 +42,7 @@ const initTaskDialog = () => {
         
         storageManager.addTask(newTask);
         createTodoPropInTab(newTask)
-        jsConfetti.addConfetti();
+        
 
         mainTaskDialog.close()
     });

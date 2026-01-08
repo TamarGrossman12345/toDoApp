@@ -1,4 +1,4 @@
-import { storageManager } from "./storageManger";
+import { storageManager } from "./storageManager";
 import TodoTask from "./todos";
 
 class Project {
