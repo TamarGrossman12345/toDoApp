@@ -1,5 +1,4 @@
 import './style.css';
-//import JSConfetti from 'js-confetti';
 import initTaskDialog from './modules/createTodoActions';
 import initProjectDialog from './modules/createProjectActions';
 import {loadTasks} from './components/taskUI'
@@ -7,17 +6,6 @@ import {storageManager} from './modules/storageManager';
 import JSConfetti from "js-confetti";
 
 const jsConfetti = new JSConfetti();
-// const todoForm = document.getElementById("todo-form");
-// const todoInput = document.getElementById("todo-input");
-// const todoListUL = document.getElementById("todo-list");
-
-// const menuButton = document.querySelector(".menu-button");
-// const menuOptions = document.querySelector(".menu-options");
-// const hideDoneTasksButton = document.getElementById("hide-done-tasks");
-// const deleteDoneTasksButton = document.getElementById("delete-done-tasks");
-// const showAllTasksButton = document.getElementById("show-all-tasks");
-
-
 
 const addTodoBtn = document.getElementById("add-todo-btn");
 const addProjectBtn = document.querySelector('#add-project-btn')
